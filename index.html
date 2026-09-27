@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="SkillSwap Nearby — trade what you know and learn what you love." />
+    <title>SkillSwap Nearby</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#discover">Skip to content</a>
+    <header class="site-header">
+      <a href="#top" class="brand" aria-label="SkillSwap Nearby home">
+        <span class="brand-mark" aria-hidden="true">↗</span>
+        <span>Skill<span>Swap</span></span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#discover">Discover</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#dashboard">My space</a>
+      </nav>
+      <button class="avatar-button" id="open-profile" aria-label="Edit your profile"><span id="header-avatar">YS</span></button>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> Your curiosity is valuable</p>
+          <h1>Trade what you know.<br /><em>Learn what you love.</em></h1>
+          <p class="hero-text">A friendly corner of the internet for swapping real-world skills with people nearby. No money. Just useful humans helping one another grow.</p>
+          <div class="hero-actions">
+            <button class="button button-primary" id="hero-create">Offer a skill <span>→</span></button>
+            <a class="text-link" href="#discover">Find your next teacher <span>↓</span></a>
+          </div>
+          <div class="member-proof" aria-label="Active community members">
+            <div class="proof-avatars"><span class="portrait portrait-coral">M</span><span class="portrait portrait-gold">J</span><span class="portrait portrait-mint">A</span><span class="portrait portrait-lilac">K</span></div>
+            <p><strong>2,400+</strong> neighbours are swapping skills this week</p>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="Example skill swap: Priya teaches pottery and learns Spanish from Mateo">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <article class="swap-scene">
+            <div class="scene-top"><span class="scene-label">A good match</span><span class="scene-spark">✦</span></div>
+            <div class="scene-people">
+              <div class="scene-person"><div class="illustrated-face face-priya">P</div><p>Priya</p><small>Pottery</small></div>
+              <div class="swap-arrow" aria-hidden="true">⇄</div>
+              <div class="scene-person"><div class="illustrated-face face-mateo">M</div><p>Mateo</p><small>Spanish</small></div>
+            </div>
+            <div class="scene-footer"><span>First swap on Saturday</span><span>♡ 98% match</span></div>
+          </article>
+          <div class="floating-note note-one">"I finally learned to use a wheel!"</div>
+          <div class="floating-note note-two">12 min walk away <span>●</span></div>
+          <div class="hero-shape shape-one"></div><div class="hero-shape shape-two"></div>
+        </div>
+      </section>
+
+      <section class="category-strip" aria-label="Popular skills">
+        <p>Explore a skill</p>
+        <div id="category-buttons">
+          <button class="category active" data-skill="All">✦ All skills</button>
+          <button class="category" data-skill="Creative">◒ Creative</button>
+          <button class="category" data-skill="Tech">⌘ Tech</button>
+          <button class="category" data-skill="Language">◌ Language</button>
+          <button class="category" data-skill="Home">⌂ Home &amp; garden</button>
+          <button class="category" data-skill="Wellbeing">☼ Wellbeing</button>
+        </div>
+      </section>
+
+      <section class="discover section" id="discover">
+        <div class="section-heading"><div><p class="eyebrow"><span></span> Meet your neighbours</p><h2>People worth learning from</h2></div><button class="button button-dark" id="discover-create">Create a swap <span>+</span></button></div>
+        <div class="discover-tools">
+          <label class="search-box"><span aria-hidden="true">⌕</span><input id="skill-search" type="search" placeholder="Search a skill, person or interest" /></label>
+          <label class="select-wrap">Within <select id="distance-filter"><option value="any">any distance</option><option value="2">2 km</option><option value="5">5 km</option><option value="10">10 km</option></select></label>
+        </div>
+        <div class="discover-layout">
+          <div class="skill-grid" id="skill-grid" aria-live="polite"></div>
+          <aside class="neighbourhood-card">
+            <div class="map-title"><div><p class="eyebrow"><span></span> Live nearby</p><h3>Your learning neighbourhood</h3></div><button class="icon-button" aria-label="Expand map">↗</button></div>
+            <div class="map-art" aria-label="Map illustration with SkillSwap members nearby">
+              <div class="map-road road-a"></div><div class="map-road road-b"></div><div class="map-road road-c"></div>
+              <span class="map-place place-a">Willow Park</span><span class="map-place place-b">Market Street</span>
+              <button class="map-pin pin-a" title="Liam — 0.8 km away">L</button><button class="map-pin pin-b" title="Aisha — 1.2 km away">A</button><button class="map-pin pin-c" title="Noah — 1.9 km away">N</button><button class="map-pin pin-d" title="Maya — 2.3 km away">M</button>
+              <span class="you-pin">You</span>
+            </div>
+            <div class="map-summary"><div><strong>38</strong><span>people nearby</span></div><div><strong>14</strong><span>new this week</span></div><button class="text-link" id="show-nearby">View map →</button></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="how section" id="how-it-works">
+        <div class="how-intro"><p class="eyebrow"><span></span> The simple bit</p><h2>Good at something?<br />That is your currency.</h2><p>Every swap starts with a little generosity. Offer a skill, find someone curious, and make a plan that fits both of you.</p></div>
+        <ol class="steps">
+          <li><span class="step-number">01</span><span class="step-icon">⌁</span><h3>Share your spark</h3><p>Add one thing you can happily teach, from spreadsheets to sourdough.</p></li>
+          <li><span class="step-number">02</span><span class="step-icon">⌘</span><h3>Find your match</h3><p>We surface neighbours whose curious minds complement yours.</p></li>
+          <li><span class="step-number">03</span><span class="step-icon">✦</span><h3>Make it happen</h3><p>Agree a time, meet safely, and leave both sides a little richer.</p></li>
+        </ol>
+      </section>
+
+      <section class="dashboard section" id="dashboard">
+        <div class="dashboard-heading"><div><p class="eyebrow"><span></span> Your space</p><h2>Good things in motion</h2></div><button class="button button-primary" id="dashboard-create">New swap <span>+</span></button></div>
+        <div class="dashboard-grid">
+          <article class="upcoming-card"><div class="card-topline"><span class="status-pill">Upcoming</span><button class="more-button" aria-label="More options">•••</button></div><p class="date-label">SATURDAY, 10:30 AM</p><h3>Make pasta from scratch</h3><div class="appointment-person"><span class="portrait portrait-coral">M</span><div><strong>Maya Patel</strong><span>Trading: UX feedback</span></div><button class="button button-small" id="message-maya">Message</button></div></article>
+          <article class="progress-card"><div><p class="eyebrow"><span></span> Your ripple</p><h3>Keep the momentum</h3></div><div class="progress-ring"><strong id="swap-count">3</strong><span>swaps<br />done</span></div><p>One more swap unlocks your <strong>Local Legend</strong> badge.</p></article>
+          <article class="messages-card"><div class="card-topline"><div><p class="eyebrow"><span></span> Inbox</p><h3>Fresh conversations</h3></div><button class="icon-button" id="open-inbox" aria-label="Open all messages">→</button></div><div id="message-preview"></div></article>
+        </div>
+      </section>
+
+      <section class="cta"><div><p class="eyebrow"><span></span> Start small, grow together</p><h2>Someone nearby<br />is hoping to learn<br /><em>what you know.</em></h2></div><button class="button button-light" id="cta-create">Offer your first skill <span>→</span></button></section>
+    </main>
+
+    <footer><a href="#top" class="brand"><span class="brand-mark">↗</span><span>Skill<span>Swap</span></span></a><p>Small exchanges. Stronger neighbourhoods.</p><div><a href="#how-it-works">About</a><a href="#discover">Discover</a><button id="reset-demo" class="footer-button">Reset demo data</button></div></footer>
+
+    <dialog class="modal" id="swap-modal">
+      <form method="dialog" class="modal-card" id="swap-form">
+        <div class="modal-heading"><div><p class="eyebrow"><span></span> Make a new connection</p><h2>Set up a skill swap</h2></div><button value="cancel" class="close-button" aria-label="Close">×</button></div>
+        <p class="modal-intro">Tell your neighbours what you can share and what you would love to learn.</p>
+        <div class="form-grid"><label>I'd love to teach <input required name="offer" id="offer-skill" placeholder="e.g. Watercolour painting" maxlength="60" /></label><label>I want to learn <input required name="request" id="request-skill" placeholder="e.g. Public speaking" maxlength="60" /></label></div>
+        <label>A little more context <textarea name="note" id="swap-note" placeholder="What does a great first swap look like?" maxlength="240"></textarea></label>
+        <div class="form-grid"><label>Best time <select name="time" id="swap-time"><option>Weekday evenings</option><option>Weekend mornings</option><option>Weekend afternoons</option><option>Flexible</option></select></label><label>How would you like to meet? <select name="format" id="swap-format"><option>In person</option><option>Online</option><option>Either works</option></select></label></div>
+        <button class="button button-primary button-full" value="default" type="submit">Publish my swap <span>→</span></button>
+      </form>
+    </dialog>
+
+    <dialog class="modal profile-modal" id="profile-modal">
+      <form method="dialog" class="modal-card" id="profile-form">
+        <div class="modal-heading"><div><p class="eyebrow"><span></span> Your little corner</p><h2>Make your profile yours</h2></div><button value="cancel" class="close-button" aria-label="Close">×</button></div>
+        <div class="profile-upload"><label class="profile-photo" for="avatar-upload" title="Choose a profile picture"><img id="profile-preview" alt="Your profile preview" hidden /><span id="profile-initials">YS</span><b>+</b></label><div><strong>Profile picture</strong><p>Choose a local image — it stays in this browser.</p><label class="upload-link" for="avatar-upload">Upload photo</label><input id="avatar-upload" type="file" accept="image/png,image/jpeg,image/webp" hidden /></div></div>
+        <div class="form-grid"><label>Your name <input required id="profile-name" maxlength="40" /></label><label>Your neighbourhood <input required id="profile-location" maxlength="40" /></label></div>
+        <label>One thing you love sharing <input id="profile-teaches" maxlength="60" placeholder="e.g. Sketching portraits" /></label>
+        <button class="button button-primary button-full" type="submit" value="default">Save profile <span>✓</span></button>
+      </form>
+    </dialog>
+
+    <dialog class="modal" id="message-modal">
+      <form method="dialog" class="modal-card message-modal-card" id="message-form">
+        <div class="modal-heading"><div><p class="eyebrow"><span></span> Say hello</p><h2 id="message-title">Message Maya</h2></div><button value="cancel" class="close-button" aria-label="Close">×</button></div>
+        <div class="chat-history" id="chat-history"></div>
+        <label>Your message <textarea id="message-text" required maxlength="300" placeholder="Write a friendly note..."></textarea></label>
+        <button class="button button-primary button-full" type="submit" value="default">Send message <span>→</span></button>
+      </form>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
