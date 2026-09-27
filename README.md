@@ -16,21 +16,6 @@ Open `index.html` in a modern browser. For the smoothest experience, open this f
 
 ## Publish to GitHub Pages
 
-1. Create a new empty GitHub repository.
-2. In this project folder, run:
-
-   ```powershell
-   git init
-   git add .
-   git commit -m "Initial SkillSwap Nearby site"
-   git branch -M main
-   git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
-   git push -u origin main
-   ```
-
-3. In your GitHub repository, open **Settings → Pages** and set **Build and deployment → Source** to **GitHub Actions**.
-4. Wait for the **Deploy static site to GitHub Pages** workflow to finish. GitHub will display the public address in the Pages settings.
-
 ## Local data note
 
 Avatar images, messages, profile changes, and new swaps remain in the browser where they were created. They are intentionally not uploaded anywhere. A production version would add authentication and a database (for example, Supabase or Firebase) before allowing people to share data with one another.
